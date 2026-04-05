@@ -1,75 +1,123 @@
-# React + TypeScript + Vite
+# 💼 FinDash – Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, production-ready **Finance Dashboard** built with **React, Vite, TypeScript, and Tailwind CSS**.
+Designed with a clean SaaS-style UI inspired by tools like Stripe, Mercury, etc.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 📊 Interactive dashboard (charts & analytics)
+* 🌙 Dark / Light mode support
+* 💾 Data persistence using Local Storage
+* 🔌 Mock API integration (for frontend-first development)
+* 📁 Export data (CSV / JSON)
+* 🔍 Advanced filtering & grouping
+* ⚡ Smooth animations & transitions
+* 📱 Fully responsive design
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🧱 Tech Stack
 
-## Expanding the ESLint configuration
+* **Frontend:** React + Vite + TypeScript
+* **Styling:** Tailwind CSS + shadcn/ui
+* **State/Data:** React Query
+* **Charts:** Recharts
+* **Forms:** React Hook Form + Zod
+* **UI Components:** Radix UI
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+  components/     → Reusable UI components
+  pages/          → App pages (Dashboard, etc.)
+  hooks/          → Custom React hooks
+  context/        → Global state providers
+  services/       → API layer (mock + real)
+  data/           → Static/mock data
+  lib/            → Utility functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repository
+
 ```
+git clone https://github.com/Ananya-Khare555/Finance_Dashboard_UI.git
+cd finance-dashboard
+```
+
+---
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+---
+
+### 3. Run development server
+
+```
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:8080
+```
+
+---
+
+
+## 🔌 API Integration
+
+Currently uses a **Mock API layer** for development.
+
+Location:
+
+```
+src/services/mockApi.ts
+```
+
+👉 Replace with real backend API later:
+
+```
+src/services/api.ts
+```
+
+---
+
+## 📊 Data Flow
+
+```
+UI → React Query → Mock API → Local State
+```
+
+
+## 📦 Export Functionality
+
+Supports:
+
+* CSV export
+* JSON export
+
+
+## 🎨 UI Design Principles
+
+* Minimal & clean layout
+* Soft shadows & rounded corners
+* High readability typography
+* Responsive grid system
+* Consistent spacing system
+
+---
+
